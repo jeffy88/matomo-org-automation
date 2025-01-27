@@ -4,56 +4,43 @@
     "elements": [
       {
         "description": "",
-        "id": "as-a-user,-i-can-navigate-to-different-pages-from-home-page;as-a-user-i-can-navigate-to-cloud-from-home-page",
+        "id": "as-a-user,-i-can-navigate-to-different-pages-from-home-page;as-a-user-i-want-to-check-any-broken-links-in-home-page",
         "keyword": "Scenario",
-        "line": 3,
-        "name": "As a user I can navigate to cloud from home page",
+        "line": 20,
+        "name": "As a user I want to check any broken links in home page",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 677318400
+              "duration": 759461100
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 21,
             "name": "I am on the home page",
             "match": {
               "location": "tests\\steps\\navigations.step.js:21"
             },
             "result": {
               "status": "passed",
-              "duration": 892224299
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 5,
-            "name": "I click the cloud link",
-            "match": {
-              "location": "tests\\steps\\navigations.step.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 181243700
+              "duration": 798141999
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 6,
-            "name": "I am directed to the cloud page",
+            "line": 22,
+            "name": "I check the broken links",
             "match": {
-              "location": "tests\\steps\\navigations.step.js:43"
+              "location": "tests\\steps\\navigations.step.js:100"
             },
             "result": {
               "status": "passed",
-              "duration": 145001899
+              "duration": 278530557700
             }
           },
           {
@@ -61,165 +48,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 485612400
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "as-a-user,-i-can-navigate-to-different-pages-from-home-page;as-a-user-i-can-navigate-to-pricing-from-home-page",
-        "keyword": "Scenario",
-        "line": 8,
-        "name": "As a user I can navigate to pricing from home page",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 623999800
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 9,
-            "name": "I am on the home page",
-            "match": {
-              "location": "tests\\steps\\navigations.step.js:21"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 816688699
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 10,
-            "name": "I click the try it for free button",
-            "match": {
-              "location": "tests\\steps\\navigations.step.js:35"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 207324100
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 11,
-            "name": "I am directed to the free analytics trial page",
-            "match": {
-              "location": "tests\\steps\\navigations.step.js:53"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 143877500
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 404210399
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "as-a-user,-i-can-navigate-to-different-pages-from-home-page;as-a-user-i-can-hover-the-pricing-link-and-click-the-contact-sales-link",
-        "keyword": "Scenario",
-        "line": 13,
-        "name": "As a user I can hover the pricing link and click the contact sales link",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 643799100
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 14,
-            "name": "I am on the home page",
-            "match": {
-              "location": "tests\\steps\\navigations.step.js:21"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 799476900
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 15,
-            "name": "I hover the pricing link",
-            "match": {
-              "location": "tests\\steps\\navigations.step.js:64"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 106388899
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 16,
-            "name": "the contact sales link should be displayed",
-            "match": {
-              "location": "tests\\steps\\navigations.step.js:72"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 249539499
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 17,
-            "name": "I click the contact sales link",
-            "match": {
-              "location": "tests\\steps\\navigations.step.js:82"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 239867499
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 18,
-            "name": "I am directed to the contact sales page",
-            "match": {
-              "location": "tests\\steps\\navigations.step.js:90"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 121680699
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 375980599
+              "duration": 510571899
             }
           }
         ],

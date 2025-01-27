@@ -16,3 +16,7 @@ Feature: As a user, I can navigate to different pages from home page
       Then the contact sales link should be displayed
       And I click the contact sales link
       Then I am directed to the contact sales page
+
+    Scenario: As a user I want to check any broken links in home page
+      Given I am on the home page
+      Then I check the broken links

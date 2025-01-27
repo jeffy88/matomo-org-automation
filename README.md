@@ -19,7 +19,9 @@ This automation framework includes the following technologies and features:
 
  - Playwright - For browser automation and end-to-end testing.
  - Cucumber JS - For Behavior-Driven Development (BDD) with Gherkin syntax.
- - GitHub Actions Workflow - Automated test execution triggered when pull requests (PRs) are made.
+ - GitHub Actions Workflow - Automated test execution triggered when pull requests (PRs) are made. The test execution reports are attached as artifacts for each pull request. To download the report, go to Actions, select the relevant workflow, navigate to Artifacts, and download the report. See a sample screenshot of the report below
+
+ ![cucumber-report](cucumber-report.png)
 
 ### Future Enhancements ###
 

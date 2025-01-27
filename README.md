@@ -1,6 +1,9 @@
 ## Matomo E2E - Testing ###
 
 ### Basic Architecture ###
+![architecture](https://github.com/user-attachments/assets/e5f13576-07c0-4418-97af-caf17666b93b)
+
+
 
 
 ### How to Run the Tests ###

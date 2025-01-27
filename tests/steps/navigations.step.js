@@ -32,6 +32,14 @@ When('I click the cloud link', async function () {
 
 });
 
+When('I click the try it for free button', async function () {
+
+    await page.locator("//a[contains(text(),'TRY IT FOR FREE')]").waitFor();
+
+    await page.locator("//a[contains(text(),'TRY IT FOR FREE')]").click();
+
+});
+
 Then('I am directed to the cloud page', async function () {
 
     await page.waitForLoadState('domcontentloaded'); // Ensure page load completion
@@ -42,8 +50,16 @@ Then('I am directed to the cloud page', async function () {
     console.log('Successfully navigated to the cloud page');
 });
 
+Then('I am directed to the free analytics trial page', async function () {
+
+    await page.waitForLoadState('domcontentloaded'); // Ensure page load completion
+    const currentURL = await page.url();
+    if (currentURL !== 'https://matomo.org/start-free-analytics-trial/') {
+        throw new Error(`Expected URL to be 'https://matomo.org/start-free-analytics-trial/' but got '${currentURL}'`);
+    }
+    console.log('Successfully navigated to the free analytics trial page');
+});
+
 After(async function () {
-
     await browser.close();
-
 })

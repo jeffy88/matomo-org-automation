@@ -60,6 +60,43 @@ Then('I am directed to the free analytics trial page', async function () {
     console.log('Successfully navigated to the free analytics trial page');
 });
 
+
+When('I hover the pricing link', async function () {
+
+    await page.locator("(//a[normalize-space()='Pricing'])[1]").waitFor();
+
+    await page.locator("(//a[normalize-space()='Pricing'])[1]").hover();
+
+});
+
+Then('the contact sales link should be displayed', async function () {
+
+    const linkItem = await page.locator("//a[@class='mega-menu-link'][normalize-space()='Contact Sales']");
+
+    await linkItem.waitFor({ state: 'visible' });
+    const isVisible = await linkItem.isVisible();
+    expect(isVisible).toBe(true)
+    
+});
+
+Then('I click the contact sales link', async function () {
+
+    await page.locator("//a[@class='mega-menu-link'][normalize-space()='Contact Sales']").waitFor();
+
+    await page.locator("//a[@class='mega-menu-link'][normalize-space()='Contact Sales']").click();
+
+});
+
+Then('I am directed to the contact sales page', async function () {
+
+    await page.waitForLoadState('domcontentloaded'); // Ensure page load completion
+    const currentURL = await page.url();
+    if (currentURL !== 'https://matomo.org/contact-sales/') {
+        throw new Error(`Expected URL to be 'https://matomo.org/contact-sales/' but got '${currentURL}'`);
+    }
+    console.log('Successfully navigated to the Contact sales page');
+});
+
 After(async function () {
     await browser.close();
 })

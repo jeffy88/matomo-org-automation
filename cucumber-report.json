@@ -1,0 +1,80 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "as-a-user,-i-can-navigate-to-different-pages-from-home-page;as-a-user-i-can-navigate-to-cloud-from-home-page",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "As a user I can navigate to cloud from home page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 706169500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the home page",
+            "match": {
+              "location": "tests\\steps\\navigations.step.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 876792599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I click the cloud link",
+            "match": {
+              "location": "tests\\steps\\navigations.step.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 219582800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I am directed to the cloud page",
+            "match": {
+              "location": "tests\\steps\\navigations.step.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5007002500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "failed",
+              "duration": 15321600,
+              "error_message": "page.waitForTimeout: Target page, context or browser has been closed\n    at World.<anonymous> (C:\\Users\\jeffy\\Documents\\matomo\\matomo-org-automation\\tests\\steps\\navigations.step.js:47:10)"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "as-a-user,-i-can-navigate-to-different-pages-from-home-page",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "As a user, I can navigate to different pages from home page",
+    "tags": [],
+    "uri": "tests\\features\\navigations.feature"
+  }
+]

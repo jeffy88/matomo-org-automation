@@ -1,0 +1,28 @@
+{
+  "name": "matomo-org-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffy88/matomo-org-automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jeffy88/matomo-org-automation/issues"
+  },
+  "homepage": "https://github.com/jeffy88/matomo-org-automation#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "@types/node": "^22.10.10"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "@cucumber/pretty-formatter": "^1.0.1",
+    "playwright": "^1.50.0"
+  }
+}

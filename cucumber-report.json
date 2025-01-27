@@ -1,0 +1,66 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "as-a-user,-i-can-navigate-to-different-pages-from-home-page;as-a-user-i-want-to-check-any-broken-links-in-home-page",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "As a user I want to check any broken links in home page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 759461100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 21,
+            "name": "I am on the home page",
+            "match": {
+              "location": "tests\\steps\\navigations.step.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 798141999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "I check the broken links",
+            "match": {
+              "location": "tests\\steps\\navigations.step.js:100"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 278530557700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 510571899
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "as-a-user,-i-can-navigate-to-different-pages-from-home-page",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "As a user, I can navigate to different pages from home page",
+    "tags": [],
+    "uri": "tests\\features\\navigations.feature"
+  }
+]

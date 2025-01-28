@@ -19,4 +19,4 @@ Feature: As a user, I can navigate to different pages from home page
 
     Scenario: As a user I want to check for any broken links or images in home page
       Given I am on the home page
-      Then I check for broken links
+      Then I check for broken links and images

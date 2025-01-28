@@ -6,7 +6,7 @@ setDefaultTimeout(300 * 1000);
 let page, browser;
 
 Before(async function () {
-    browser = await chromium.launch({ headless: true });
+    browser = await chromium.launch({ headless: false });
     const context = await browser.newContext();
     page = await context.newPage();
 });
@@ -79,7 +79,8 @@ Then("I am directed to the contact sales page", async function () {
     console.log("Successfully navigated to the contact sales page");
 });
 
-Then("I check for broken links", async function () {
+Then("I check for broken links and images", async function () {
+    // Check for broken links
     const links = await page.$$eval("a[href]", (anchors) =>
         anchors.map((anchor) => anchor.href)
     );
@@ -105,6 +106,39 @@ Then("I check for broken links", async function () {
         );
     } else {
         console.log("No broken links found");
+    }
+
+    // Check for broken images
+    const imageSources = await page.$$eval("img", (images) =>
+        images.map((img) => ({
+            src: img.src,
+            alt: img.alt || "No alt text",
+        }))
+    );
+
+    const brokenImages = [];
+
+    for (const image of imageSources) {
+        try {
+            const response = await page.goto(image.src, { waitUntil: "networkidle" });
+
+            if (response.status() !== 200) {
+                brokenImages.push({ src: image.src, status: response.status, alt: image.alt });
+            }
+        } catch (error) {
+            brokenImages.push({ src: image.src, status: "Failed to load", alt: image.alt });
+        }
+    }
+
+    if (brokenImages.length > 0) {
+        console.log("Broken Images:");
+        brokenImages.forEach((brokenImage) =>
+            console.log(
+                `Image Source: ${brokenImage.src} - Status: ${brokenImage.status} - Alt Text: ${brokenImage.alt}`
+            )
+        );
+    } else {
+        console.log("No broken images found");
     }
 });
 
